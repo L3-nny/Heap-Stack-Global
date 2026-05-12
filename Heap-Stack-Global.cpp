@@ -9,6 +9,10 @@ class Home {
     
     private:
         string address;
+        int numRooms;
+
+        Home(string addr, int rooms, double p, bool g)
+            : address(addr), numRooms(rooms), price(p), hasGarage(g) {}
 
     friend void displayHomeInfo(const Home& h);
 };

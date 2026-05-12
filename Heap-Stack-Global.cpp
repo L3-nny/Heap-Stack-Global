@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -18,8 +19,6 @@ class Home {
 };
 
 
-    //need to allocate some to heap, stack and global
-double calculatePrice(const Home& h) {
-    //need to allocate some to heap, stack and global
-    return h.price; // Accessing private member via friend function
-}
+
+// GLOBAL MEMORY where the object exists for the entire program duration
+Home globalHome("Locle Street", 5, 250000.0, false);

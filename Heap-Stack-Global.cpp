@@ -5,11 +5,10 @@ using namespace std;
 class Home {
     public:
         string address;
-        int numRooms;
+        bool hasGarage;
     
     private:
-        double price;
-        bool hasGarage;
+        string address;
 
     friend void displayHomeInfo(const Home& h);
 };

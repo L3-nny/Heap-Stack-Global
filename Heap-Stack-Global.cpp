@@ -24,12 +24,24 @@ Home globalHome("Locle Street", 5, 250000.0, false);
 
 void displayHomeInfo(const Home& h) {
     cout << "Home Address: " << h.address << endl; 
-    cout << "Price: $" << h.price << endl;
+    cout << "Price: ksh" << h.price << endl;
 }
 
 int main() {
     // STACK MEMORY - local variable only existing within the scope of main()
     Home stackHome("PromisedLand Street", 2, 150000.0, true);
 
+
+    // HEAP MEMORY - object that exists until we explicitly delete it
+    Home* heapHome = new Home("Fanaka Street", 5, 7500000.0, true);
+
+    displayHomeInfo(globalHome);
+    displayHomeInfo(stackHome);
+    displayHomeInfo(*heapHome);
+    
+    //Need to clean up heap memory to prevent memory leaks
+    delete heapHome;
+
+    return 0;
 }
 

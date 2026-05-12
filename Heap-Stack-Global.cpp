@@ -26,3 +26,10 @@ void displayHomeInfo(const Home& h) {
     cout << "Home Address: " << h.address << endl; 
     cout << "Price: $" << h.price << endl;
 }
+
+int main() {
+    // STACK MEMORY - local variable only existing within the scope of main()
+    Home stackHome("PromisedLand Street", 2, 150000.0, true);
+
+}
+

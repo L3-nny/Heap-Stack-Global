@@ -25,7 +25,7 @@ Home globalHome("Locle Street", 5, 250000.0, false);
 void displayHomeInfo(const Home& h) {
     cout << "Home Address: " << h.address << endl; 
     cout << "Price: Ksh." << h.price << endl;
-    cout << "Has Garage: " << h.hasGarage << endl;
+    cout << "Has Garage: " << (h.hasGarage ? "Yes" : "No") << endl;
 }
 
 int main() {

@@ -12,7 +12,8 @@ class Home {
         double price;
         bool hasGarage;
     
-        Home(string addr, int rooms, double p, bool g)
+        Home(string addr, int rooms,
+             double p, bool g)
             : address(addr), numRooms(rooms), price(p), hasGarage(g) {}
 
     friend void displayHomeInfo(const Home& h);
@@ -42,6 +43,8 @@ int main() {
     
     //Need to clean up heap memory to prevent memory leaks
     delete heapHome;
+
+    heapHome = nullptr;
 
     return 0;
 }
